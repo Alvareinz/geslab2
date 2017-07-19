@@ -17,10 +17,10 @@
         <td><%= type.name %></td>
         <td><%= type.type_name %></td>
         <%if can? :read, @type%>
-        <td><%= link_to 'Show', type %></td>
+        <td><%= link_to 'Mostrar', type %></td>
         <%end%>
-        <td><%= link_to 'Edit', edit_type_path(type) %></td>
-        <td><%= link_to 'Destroy', type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Editar', edit_type_path(type) %></td>
+        <td><%= link_to 'Destruir', type, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +29,4 @@
 <br>
 
 
-<%= link_to 'New Type', new_type_path %>
+<%= link_to 'Nuevo tipo', new_type_path %>
