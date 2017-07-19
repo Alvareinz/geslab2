@@ -5,16 +5,16 @@
 </head>
 <body>
 <div class="jumbotron">
+<div class="container">
 <h1>Bienvenido a geslab</h1>
  <%if user_signed_in?%>
-	<li>
 		<p>Cierra la sesión <%= link_to "Aquí", destroy_user_session_path, method: :delete, class: 'btn btn-danger btn-default btn-lg'%></p>
-	</li>
 	<%else%>
-	<li>
-		<p>Inicia sesión <%= link_to "Aquí", new_user_session_path, class: 'btn btn-success btn-default btn-lg'%></p>
-	</li>
+	<p><%= link_to "Iniciar sesión", new_user_session_path, class: 'btn btn-success btn-default btn-lg'%>
+		<%= link_to "Regístrate", new_user_registration_path, class: 'btn btn-primary btn-default btn-lg'%>
+	</p>
 	<%end%>
+</div>
 </div>
 </body>
 </html>
