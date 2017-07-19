@@ -10,8 +10,8 @@
  <%if user_signed_in?%>
 		<p><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: 'btn btn-danger btn-default btn-lg'%></p>
 	<%else%>
-	<p><%= link_to "Iniciar sesión", new_user_session_path, class: 'btn btn-danger btn-default btn-lg'%>
-		<%= link_to "Regístrate", new_user_registration_path, class: 'btn btn-info btn-default btn-lg'%>
+	<p><%= link_to "Iniciar sesión", new_user_session_path, class: 'btn btn-danger btn btn-primary btn-xs'%>
+		<%= link_to "Regístrate", new_user_registration_path, class: 'btn btn-info btn btn-primary btn-xs'%>
 	</p>
 	<%end%>
 </div>
