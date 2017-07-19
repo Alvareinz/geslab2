@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hardwares</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Serie</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hardwares.each do |hardware| %>
+      <tr>
+        <td><%= hardware.type %></td>
+        <td><%= hardware.serie %></td>
+        <td><%= hardware.status %></td>
+        <td><%= link_to 'Mostrar', hardware %></td>
+        <td><%= link_to 'Editar', edit_hardware_path(hardware) %></td>
+        <td><%= link_to 'Eliminar', hardware, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Agregar hardware', new_hardware_path %>
